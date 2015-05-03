@@ -10,7 +10,9 @@
     }
 
     if (session_status() == PHP_SESSION_ACTIVE) {
-        if(!isset($_SESSION['username'])) {
+        $loggedOn = true;
+
+        if (!isset($_SESSION['username'])) {
             $_SESSION['username'] = $_POST['username'];
         }
 
