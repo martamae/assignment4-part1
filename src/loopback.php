@@ -1,16 +1,24 @@
 <?php
-    echo 'here';
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        foreach ($_POST as $key => $value) {
-            echo $key . ' : ' . $value . '<br>';
-        }
+            $POSTarr = $_POST;
+
+            if ($POSTarr == NULL) {
+                echo '{"Type":"POST", "parameters": null}';
+            }
+            else {
+                echo '{"Type":"POST", "parameters":' . json_encode($POSTarr);
+            }
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        foreach ($_GET as $key => $value) {
-            echo $key . ' : ' . $value . '<br>';
-        }
+            $GETarr = $_GET;
+
+            if ($GETarr == NULL) {
+                echo '{"Type":"GET", "parameters": null}';
+            }
+            else {
+                echo '{"Type":"GET", "parameters":' . json_encode($GETarr);
+            }
     }
 
 ?>
