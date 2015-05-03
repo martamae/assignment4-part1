@@ -11,5 +11,6 @@
             echo 'Click
             <a href="http://web.engr.oregonstate.edu/~wegnerma/CS290/Assignment4/login.php">here</a>
              to logout <br>';
+            echo '<a href="http://web.engr.oregonstate.edu/~wegnerma/CS290/Assignment4/content2.php">Content 2</a> <br>';
     }
 ?>
